@@ -1,14 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;500;600;700&display=swap');
+
 :root {
     /* Design System */
     --clr_primary-100: hsl(0, 0%, 63%);
     --clr_primary-200: hsl(0, 0%, 0%);
     --clr_primary-300: hsl(0, 0%, 100%);
     --clr_primary-400: hsl(0, 0%, 27%);
-    --ff-primary: ;
+    --ff-primary: 'League Spartan';
     --fs-100: 0.75rem;
-    --fw--200: 500;
-    --fw-300: 600;
-    --fw-400: 700;
+    --fs-200: calc(1rem);
+    --fs-300: calc(0.7vw + 0.5rem);
+    --fs-400: calc(1vw + 0.5rem);
+    --fs-500: calc(1vw + 2rem);
+    --fw-100: 100;
+    --fw-400: 400;
+    --fw--500: 500;
+    /* --fw-600: 400; */
+    --fw-700: 700;
+    --line-height: 17px;
 }
 
 /* CSS general resets */
@@ -45,7 +54,13 @@ button {
 
 
 /* CSS generic selector */
+body {
+    font-family: var(--ff-primary);
+}
 
+p {
+    line-height: var(--line-height);
+}
 /* ------------------- */
 
 
@@ -75,6 +90,10 @@ button {
     text-transform: uppercase;
 }
 
+.lowercase {
+    text-transform: lowercase;
+}
+
 .pos-abs {
     position: absolute;
 }
@@ -83,27 +102,50 @@ button {
     position: relative;
 }
 
-.fs-100 {
+.fw-100 {
+    font-weight: var(--fw-500);
     font-size: var(--fs-100);
 }
 
-
 .fw-200 {
-    font-weight: var(--fw--200);
+    font-weight: var(--fw-400);
+    font-size: var(--fs-200);
+    /* font-weight: var(--fw--200); */
 }
 
 .fw-300 {
-    font-weight: var(--fw-300);
+    font-weight: var(--fw-400);
+    font-size: var(--fs-300);
+    /* font-weight: var(--fw-300); */
 }
 
 .fw-400 {
-    font-weight: var(--fw-400);
+    font-size: var(--fs-400);
+    font-weight: var(--fw-700);
+    /* font-weight: var(--fw-400); */
 }
 
+.fw-500 {
+    font-size: var(--fs-500);
+    font-weight: var(--fw-700);
+    /* font-weight: var(--fw-400); */
+}
+
+.clr-white {
+    color: var(--clr_primary-300);
+}
+
+.text-accent-100 {
+    color: var(--clr_primary-100);
+}
+
+.bg-white {
+    background-color: var(--clr_primary-300);
+}
 /* ------------------------ */
 
 
-/* Component Styling */
+/*--------- Component Styling -----------*/
 .main__header {
     inset-inline: 0;
     background-color: transparent;
@@ -119,6 +161,23 @@ button {
     align-items: flex-start;
 }
 
+.navbar__menu>li {
+    cursor: default;
+    position: relative;
+}
+
+.navbar__menu>li:hover::after {
+    content: '';
+    width: 40%;
+    height: 3px;
+    display: block;
+    background-color: var(--clr_primary-300);
+    position: absolute;
+    inset-inline: 25%;
+    bottom: -10px;
+    border-radius: 160px;
+}
+
 .navbar-btn {
     width: 20px;
     display: none;
@@ -132,14 +191,25 @@ button {
 .container {
     grid-template-columns: 1fr;
     gap: 0;
-    /* grid-template-rows: 1fr 0.5fr; */
 }
-
 
 .main__content {
     grid-template-columns: 1fr 1fr;
 }
 
+.main__side-text {
+    padding-inline: calc(4vw + 2rem);
+    padding-block: 2rem;
+}
+
+.shop-now:hover {
+    color: var(--clr_primary-100);
+}
+
+.main__about-text {
+    padding-block: 2rem;
+    padding-inline: calc(2vw + 1rem);
+}
 
 .main__footer {
     grid-template-columns: 1fr 1.5fr 1fr;
@@ -153,11 +223,13 @@ button {
         grid-auto-rows: 1fr;
     }
 }
+/* --------------------------- */
 
 @media (max-width: 700px) {
     .navbar-btn {
         display: block;
     }
+
     .navbar__logo {
         position: absolute;
         inset-block-start: 45%;
@@ -166,6 +238,8 @@ button {
     }
 
     .navbar__menu {
+        color: var(--clr_primary-200);
+        font-size: var(--fs-200);
         justify-content: end;
         align-items: center;
         padding-inline-end: 2em;

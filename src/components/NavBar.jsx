@@ -23,11 +23,11 @@ const NavBar = () => {
       <div className="navbar__logo">
         <img src={Logo} />
       </div>
-      <ul id='navMenu' className="navbar__menu fs-100 flex navbar__menu--hide" style={{ '--gap': '2rem' }}>
+      <ul id='navMenu' className="navbar__menu fs-100 flex lowercase navbar__menu--hide fw-200 clr-white" style={{ '--gap': '2rem' }}>
         <li className="navbar__link">Home</li>
-        <li className="navbar__link">shop</li>
-        <li className="navbar__link">about</li>
-        <li className="navbar__link">contact</li>
+        <li className="navbar__link">Shop</li>
+        <li className="navbar__link">About</li>
+        <li className="navbar__link">Contact</li>
       </ul>
     </nav>
   )
