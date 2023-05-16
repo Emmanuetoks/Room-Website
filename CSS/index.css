@@ -24,6 +24,28 @@ ul {
     list-style: none;
 }
 
+img {
+    width: 100%;
+    height: 100%;
+}
+
+body,
+.main,
+#root {
+    min-height: 100vh;
+}
+
+/* ------------- */
+
+
+/* CSS generic selector */
+body {
+    overflow: hidden;
+}
+
+/* ------------------- */
+
+
 /* Utility classes */
 .flex {
     display: flex;
@@ -32,6 +54,10 @@ ul {
 
 .grid {
     display: grid;
+}
+
+.center-items {
+    place-items: center;
 }
 
 .sr-only {
@@ -67,6 +93,9 @@ ul {
     font-weight: var(--fw-400);
 }
 
+/* ------------------------ */
+
+
 /* Component Styling */
 .main__header {
     padding: 3rem 4rem;
@@ -82,10 +111,17 @@ ul {
     align-items: flex-start;
 }
 
-.main__content {
-    
+.container {
+    grid-template-columns: 1fr;
+    gap: 0;
 }
 
-.main__side-text {
-    place-items: center;
+.main__content {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+}
+
+
+.main__footer {
+    grid-template-columns: 1fr 1.5fr 1fr;
 }
