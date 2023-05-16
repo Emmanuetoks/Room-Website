@@ -6,7 +6,7 @@ import footerImageLight from '../../public/assets/images/image-about-light.jpg'
 
 const RootLayout = () => {
     return (
-        <main className="main grid container">
+        <main className="main grid container pos-rel">
             <header className="main__header pos-abs">
                 <NavBar />
             </header>
