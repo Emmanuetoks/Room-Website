@@ -1,9 +1,8 @@
-import { useEffect, useState } from 'react'
 const Home = () => {
   return (
-    <>
-        Home
-    </>
+    <div className="main__content grid"> 
+      
+    </div>
   )
 }
 

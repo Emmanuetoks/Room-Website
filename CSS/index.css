@@ -1,0 +1,67 @@
+:root {
+    /* Design System */
+    --clr_primary-100: hsl(0, 0%, 63%);
+    --clr_primary-200: hsl(0, 0%, 0%);
+    --clr_primary-300: hsl(0, 0%, 100%);
+    --clr_primary-400: hsl(0, 0%, 27%);
+    --ff-primary: ;
+    --fs-100: 0.75rem;
+}
+
+/* CSS general resets */
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Utility classes */
+.flex {
+    display: flex;
+    gap: var(--gap);
+}
+
+.grid {
+    display: grid;
+}
+
+.sr-only {
+    position: absolute;
+    width: 0;
+    height: 0;
+    clip-path: circle(0);
+    overflow: hidden;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.pos-abs {
+    position: absolute;
+}
+
+.fs-100 {
+    font-size: var(--fs-100);
+}
+
+/* Component Styling */
+.main__header {
+    padding: 3rem 4rem;
+}
+
+.navbar {
+    height: 4rem;
+    align-items: center;
+}
+
+
+.navbar__menu {
+    align-items: flex-start;
+}
