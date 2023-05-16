@@ -6,6 +6,9 @@
     --clr_primary-400: hsl(0, 0%, 27%);
     --ff-primary: ;
     --fs-100: 0.75rem;
+    --fw--200: 500;
+    --fw-300: 600;
+    --fw-400: 700;
 }
 
 /* CSS general resets */
@@ -51,6 +54,19 @@ ul {
     font-size: var(--fs-100);
 }
 
+
+.fw-200 {
+    font-weight: var(--fw--200);
+}
+
+.fw-300 {
+    font-weight: var(--fw-300);
+}
+
+.fw-400 {
+    font-weight: var(--fw-400);
+}
+
 /* Component Styling */
 .main__header {
     padding: 3rem 4rem;
@@ -64,4 +80,12 @@ ul {
 
 .navbar__menu {
     align-items: flex-start;
+}
+
+.main__content {
+    
+}
+
+.main__side-text {
+    place-items: center;
 }
