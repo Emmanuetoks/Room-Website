@@ -218,9 +218,14 @@ p {
     bottom: 0;
 }
 
-.slide-btn {
+.slide-link {
     width: 50%;
-    /* aspect-ratio: 7 / 12; */
+    /* background-color: red; */
+}
+
+.slide-btn {
+    width: 100%;
+    height: 100%;
     background-position: 50%;
 }
 

@@ -1,10 +1,14 @@
+import { Link } from 'react-router-dom'
 import arrowImg from '../../public/assets/images/icon-arrow.svg'
-import angleLeft from '../../public/assets/images/icon-angle-left.svg'
-
-import angleRight from '../../public/assets/images/icon-angle-right.svg'
-
 
 const SideText = ({ children, heading, bodyText }) => {
+    const slideBack = (e) => {
+        
+    }
+
+    const slideFoward = (e) => {
+        
+    }
     return (
         <div className='main__side-text grid center-items bg-white pos-rel'>
             <article>
@@ -17,13 +21,19 @@ const SideText = ({ children, heading, bodyText }) => {
                     </span>
                 </a>
             </article>
-            <div className='slider-bar flex pos-abs bg-black' style={{'--gap': 'rem'}}>
-                <button className='slide-btn bg-black btn-left'>
-                    <span className='sr-only'>btn right</span>
-                </button>
-                <button className='slide-btn bg-black btn-right'>
-                    <span className='sr-only'>btn left</span>
-                </button>
+            <div className='slider-bar flex pos-abs bg-black' style={{ '--gap': 'rem' }}>
+                <Link className='slide-link' to={'/3'}>
+                    <button className='slide-btn bg-black btn-left'>
+
+                        <span className='sr-only'>btn right</span>
+                    </button>
+                </Link>
+
+                <Link className='slide-link' to={'/2'}>
+                    <button className='slide-btn bg-black btn-right'>
+                        <span className='sr-only'>btn left</span>
+                    </button>
+                </Link>
             </div>
         </div>
     )
