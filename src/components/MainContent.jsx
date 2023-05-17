@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { useSideText } from "../hooks/myhooks"
+import arrowImg from '../../public/assets/images/icon-arrow.svg'
 
 const MainContent = () => {
   const [position, setPosition] = useState(0)
@@ -35,7 +36,7 @@ const MainContent = () => {
           <p className="fw-200 text-accent-100" style={{ 'marginBlock': '2rem' }}>{slideData[position].paragraphText}</p>
           <a className="fw-300 clr-black flex shop-now uppercase" style={{ 'letterSpacing': '10px', 'cursor': 'pointer', 'alignItems': 'center', '--gap': '1rem' }}>shop now
             <span>
-              <img src={'gg'} />
+              <img src={arrowImg} />
             </span>
           </a>
         </article>
